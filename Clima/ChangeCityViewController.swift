@@ -31,8 +31,7 @@ class ChangeCityViewController: UIViewController {
         //1 Get the city name the user entered in the text field
         let cityName = changeCityTextField.text!
         
-        //2 If we have a delegate set, call the method userEnteredANewCityName
-        // delegate? = delegate nil degilse. Buna Optional chaining denir. Optional binding'e alternatif. Ders 156
+        // 2 If we have a delegate set, call the method userEnteredANewCityName
         delegate?.userEnteredANewCityName(city: cityName)
         
         //3 dismiss the Change City View Controller to go back to the WeatherViewController

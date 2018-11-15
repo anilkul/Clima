@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  pokedex
 //
-//  Created by Mehmet Anıl Kul on 9.08.2017.
+//  Created by Mehmet Anıl Kul on 5.12.2017.
 //  Copyright © 2017 Mehmet Anıl Kul. All rights reserved.
 //
 
@@ -58,7 +58,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
                 self.updateWeatherData(json: weatherJSON)
                 print(weatherJSON)
             } else {
-                print("Error: \(response.result.error)")
+                print("Error: \(response.result.error!)")
                 self.cityLabel.text = "Connection Issues"
             }
             
@@ -104,7 +104,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     //Write the updateUIWithWeatherData method here:
     func updateUIWithWeatherData() {
         cityLabel.text = weatherDataModel.city
-        temperatureLabel.text = "\(weatherDataModel.temperature)"
+        temperatureLabel.text = "\(weatherDataModel.temperature)°C"
         weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
     }
     
